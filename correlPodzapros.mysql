@@ -1,0 +1,8 @@
+
+/*select idDrug, Title, Price,Shelflife,(select Name from `manufacturer` where `manufacturer`.`idManufacturer`=drug.idManufacturer) as Name, (select Country,City from `manufadress` where `manufadress`.`idManufAdress` = manufacturer.idManufAdr) as Adress  from `drug`;*/
+
+/*INSERT INTO `users`(`Name`) VALUES (@name);*/
+/*Борщаговский химико-фармацевтический завод*/
+/*select * from manufadress;*/
+
+select idDrug as id Товара, Title as Название, Price as Цена грн,Shelflife as Срок Хранения, manufacturer.Name as Производитель from Drug inner join manufacturer on drug.idManufacturer = manufacturer.idManufacturer where Title like "Нуро%";

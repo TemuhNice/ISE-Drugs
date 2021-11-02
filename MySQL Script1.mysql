@@ -1,0 +1,5 @@
+
+/*select * from `drug`;*/
+/*select * from `manufacturer`;*/
+
+select * from `manufacturer`;

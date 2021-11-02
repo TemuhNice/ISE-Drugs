@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{712300EA-2C94-4D54-81FD-E87F6D18FB84}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AptekaKursovoy</RootNamespace>
+    <AssemblyName>AptekaKursovoy</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\ARTEM\Desktop\Универ\ТПКС\Курсач\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\mainIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5F729D8079187D7B61E4849A5BF283D6C2ABEE0B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AptekaKursovoy_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCompany.Designer.cs">
+      <DependentUpon>AddCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDrug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDrug.Designer.cs">
+      <DependentUpon>AddDrug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUser.cs">
+      <SubType>Form</SubType>
+      <CustomToolNamespace>AptekaKursovoy</CustomToolNamespace>
+    </Compile>
+    <Compile Include="AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="aptekaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>aptekaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanyInfo.Designer.cs">
+      <DependentUpon>CompanyInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="DrugInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugInfo.Designer.cs">
+      <DependentUpon>DrugInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCompany.Designer.cs">
+      <DependentUpon>EditCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditDrug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDrug.Designer.cs">
+      <DependentUpon>EditDrug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUser.Designer.cs">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RoundButton2.xaml.cs">
+      <DependentUpon>RoundButton2.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCompany.resx">
+      <DependentUpon>AddCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDrug.resx">
+      <DependentUpon>AddDrug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompanyInfo.resx">
+      <DependentUpon>CompanyInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugInfo.resx">
+      <DependentUpon>DrugInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCompany.resx">
+      <DependentUpon>EditCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDrug.resx">
+      <DependentUpon>EditDrug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditUser.resx">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="aptekaDataSet.xsc">
+      <DependentUpon>aptekaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="aptekaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>aptekaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="aptekaDataSet.xss">
+      <DependentUpon>aptekaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AptekaKursovoy_TemporaryKey.pfx" />
+    <None Include="Images\Account_add-256.webp" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Close_Icon_Circle_1398920.png" />
+    <None Include="Resources\iconfinder_Filter_Funnel_4781834.png" />
+    <None Include="Resources\imgonline-com-ua-Resize-au6tebfyrPfT8IUC.png" />
+    <None Include="Resources\iconfinder_Add_728898.png" />
+    <None Include="Resources\iconfinder_magnifyingglass_1055031.png" />
+    <None Include="Resources\iconfinder_documents-07_1622836.png" />
+    <None Include="Resources\iconfinder_female1_403023.png" />
+    <None Include="Resources\iconfinder_malecostume_403022.png" />
+    <None Include="Resources\iconfinder_8_avatar_2754583.png" />
+    <None Include="Resources\closeTransparent.png" />
+    <None Include="Resources\iconfinder_arrow_down2_1814082.png" />
+    <None Include="Resources\iconfinder_transmission-tray-icon_87693.png" />
+    <None Include="Resources\iconfinder_Close_1891023.png" />
+    <None Include="Resources\iconfinder_close_309090.png" />
+    <None Include="Resources\imgonline-com-ua-Resize-dsmSXBTe6WYdXb.png" />
+    <None Include="Images\bfb4b5943c14bf6d3a9a9aa0991f623d.png" />
+    <None Include="Images\bg.jpg" />
+    <None Include="Images\bg.1jpg.jpg" />
+    <None Include="Images\18473-rekomendacii.png" />
+    <None Include="Images\company_fon.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\edit.png" />
+    <None Include="Images\enterBG.png" />
+    <Content Include="Images\mainIcon.ico" />
+    <Content Include="Images\mainimg.png" />
+    <None Include="Resources\iconfinder_add_476322.png" />
+    <None Include="Resources\iconfinder_SEO-09_2588770.png" />
+    <None Include="Resources\iconfinder_add_user_male_2639755 %281%29.png" />
+    <None Include="Resources\iconfinder_add_user_309049.png" />
+    <None Include="Images\Rounded-38-256.png" />
+    <None Include="Images\medical-695360362.jpg" />
+    <None Include="Images\search1T.png" />
+    <None Include="Images\voz-info.jpg" />
+    <None Include="Images\voz-info2.jpg" />
+    <Content Include="Images\yes.png" />
+    <None Include="Resources\addCompanyT.png" />
+    <Content Include="Resources\add_user-256.png" />
+    <None Include="Resources\iconfinder_login_account_enter_door_3005767.png" />
+    <None Include="Resources\iconfinder_login_enter_sign_in_input_access_3994380.png" />
+    <None Include="Resources\iconfinder_27_3229643.png" />
+    <None Include="Resources\iconfinder_Sed-02_2542759.png" />
+    <None Include="Resources\iconfinder_add_user_male_2639755.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\connN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="RoundButton2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
